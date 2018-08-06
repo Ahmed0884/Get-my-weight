@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="17A365" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="get_my_weight" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,84 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hf3-q4-eR3">
+                                <rect key="frame" x="49" y="65" width="276" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your height" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q1T-sO-zFO">
+                                <rect key="frame" x="49" y="117" width="276" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Plz select you gender " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yj-vI-1Z7">
+                                <rect key="frame" x="71" y="255" width="233" height="38"/>
+                                <color key="backgroundColor" red="0.68048486890355642" green="0.63685271292697532" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.027604975399999999" green="0.063509689509999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w68-HX-E0g">
+                                <rect key="frame" x="49" y="526" width="276" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.027604975399999999" green="0.063509689509999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyc-E2-Ouu">
+                                <rect key="frame" x="57" y="440" width="261" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Press to get your best weight">
+                                    <color key="titleColor" red="0.027604975399999999" green="0.063509689509999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getweight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EX0-MV-RfL"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fku-9p-W1e">
+                                <rect key="frame" x="109" y="301" width="157" height="83"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="Zns-d3-hJj"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gCW-G7-ljX"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Cy6-PG-WgG"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60203361839623004" green="0.52606257330434536" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fku-9p-W1e" firstAttribute="leading" secondItem="2yj-vI-1Z7" secondAttribute="leading" id="8Wh-be-tWV"/>
+                            <constraint firstItem="Q1T-sO-zFO" firstAttribute="leading" secondItem="hf3-q4-eR3" secondAttribute="leading" id="90B-GF-Yks"/>
+                            <constraint firstItem="2yj-vI-1Z7" firstAttribute="trailing" secondItem="Q1T-sO-zFO" secondAttribute="trailing" id="9bm-3r-gQG"/>
+                            <constraint firstItem="2yj-vI-1Z7" firstAttribute="top" secondItem="Q1T-sO-zFO" secondAttribute="bottom" constant="67" id="MJw-TS-Btr"/>
+                            <constraint firstItem="Q1T-sO-zFO" firstAttribute="trailing" secondItem="hf3-q4-eR3" secondAttribute="trailing" id="QV7-IC-C4h"/>
+                            <constraint firstItem="Q1T-sO-zFO" firstAttribute="top" secondItem="hf3-q4-eR3" secondAttribute="bottom" constant="46" id="Shr-rW-sjt"/>
+                            <constraint firstItem="fku-9p-W1e" firstAttribute="trailing" secondItem="2yj-vI-1Z7" secondAttribute="trailing" id="UEX-ao-Dp9"/>
+                            <constraint firstItem="fku-9p-W1e" firstAttribute="top" secondItem="2yj-vI-1Z7" secondAttribute="bottom" constant="41" id="bZz-uM-uCa"/>
+                            <constraint firstItem="hf3-q4-eR3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="ebe-PK-hfb"/>
+                            <constraint firstItem="hf3-q4-eR3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="48" id="j8J-kZ-Pmk"/>
+                            <constraint firstItem="2yj-vI-1Z7" firstAttribute="leading" secondItem="Q1T-sO-zFO" secondAttribute="leading" id="qSc-y2-P9E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hf3-q4-eR3" secondAttribute="trailing" constant="19" id="v2X-bO-mva"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="agetxt" destination="hf3-q4-eR3" id="Wid-SC-dAP"/>
+                        <outlet property="heighttxt" destination="Q1T-sO-zFO" id="6VH-py-JJa"/>
+                        <outlet property="picker" destination="fku-9p-W1e" id="leS-RI-HxW"/>
+                        <outlet property="selectedgender" destination="2yj-vI-1Z7" id="UcO-gK-ZeD"/>
+                        <outlet property="yourbest" destination="w68-HX-E0g" id="SaM-zg-l5z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
